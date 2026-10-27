@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio desainer pattern, mahasiswa Bisnis Digital UIN K.H. Abdurrahman Wahid Pekalongan">
+    <title>Portfolio Desainer Pattern | Roshikhotun Muthi'ah</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <header id="header">
+        <nav class="navbar">
+            <a href="#home" class="logo">RŌSHI STUDIO</a>
+
+            <button class="menu-toggle" id="menuToggle" aria-label="Buka menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#tentang" class="nav-link">Tentang</a></li>
+                <li><a href="#skill" class="nav-link">Skill</a></li>
+                <li><a href="#project" class="nav-link">Project</a></li>
+                <li><a href="#kontak" class="nav-link">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ===================== HOME ===================== -->
+        <section id="home" class="section hero">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <p class="hero-greeting">Desainer Pattern &ndash; Elegance in Every Thread</p>
+                    <h1 id="namaLengkap">Roshikhotun Muthi'ah</h1>
+                    <ul class="biodata">
+                        <li><strong>NIM</strong><span>: 40425063</span></li>
+                        <li><strong>Program Studi</strong><span>: Bisnis Digital</span></li>
+                    </ul>
+                    <a href="#project" class="btn">Lihat Karya Saya</a>
+                </div>
+
+                <div class="hero-photo">
+                    <!-- Ganti images/foto-profil.jpg dengan foto Anda -->
+                    <img src="images/foto profil.png" alt="Foto profil desainer pattern" id="fotoProfil"
+                         onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 300 300%27%3E%3Crect width=%27300%27 height=%27300%27 fill=%27%23eadcf0%27/%3E%3Ccircle cx=%27150%27 cy=%27115%27 r=%2760%27 fill=%27%23a98bb8%27/%3E%3Cpath d=%27M40 300c0-70 50-115 110-115s110 45 110 115z%27 fill=%27%23a98bb8%27/%3E%3C/svg%3E'">
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== TENTANG ===================== -->
+        <section id="tentang" class="section">
+            <div class="container">
+                <h2 class="section-title">Tentang Saya</h2>
+
+                <p class="about-text">
+                    Saya adalah mahasiswa Program Studi Bisnis Digital, Fakultas Ekonomi dan Bisnis Islam,
+                    UIN K.H. Abdurrahman Wahid Pekalongan, yang berkarya sebagai desainer pattern.
+                    Saya merancang motif kain dan pola berulang untuk busana muslimah modern dengan
+                    sentuhan kreatif, detail yang rapi, dan karakter visual yang khas. Bagi saya, busana
+                    bukan sekadar apa yang dikenakan, melainkan cara mengekspresikan jati diri. Lewat
+                    pelajaran Bisnis Digital, saya juga belajar memasarkan karya desain secara online
+                    dan membangun website sendiri.
+                </p>
+
+                <h3 class="sub-title">Riwayat Pendidikan</h3>
+                <div class="table-wrap">
+                    <table id="tabelPendidikan">
+                        <thead>
+                            <tr>
+                                <th>No</th>
+                                <th>Jenjang</th>
+                                <th>Nama Institusi</th>
+                                <th>Tahun</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>SD/MI</td>
+                                <td>MSI 10 Kramatsari</td>
+                                <td>2013 – 2019</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>SMP/MTs</td>
+                                <td>SMP Salafiyah Pekalongan</td>
+                                <td>2019 – 2022</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>SMA/MA/SMK</td>
+                                <td>SMK Negeri 1 Pekalongan</td>
+                                <td>2022 – 2025</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Perguruan Tinggi</td>
+                                <td>UIN K.H. Abdurrahman Wahid Pekalongan</td>
+                                <td>2025 – sekarang</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== SKILL ===================== -->
+        <section id="skill" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Skill</h2>
+
+                <ul class="skill-list">
+                    <li class="skill-item">
+                        <span>Desain Motif Kain</span>
+                        <span class="skill-percent">90%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span>Seamless Pattern</span>
+                        <span class="skill-percent">85%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span>Adobe Illustrator</span>
+                        <span class="skill-percent">80%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span>Pemilihan Palet Warna</span>
+                        <span class="skill-percent">80%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span>Digital Marketing</span>
+                        <span class="skill-percent">70%</span>
+                    </li>
+                    <li class="skill-item">
+                        <span>HTML, CSS, JavaScript Dasar</span>
+                        <span class="skill-percent">60%</span>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ===================== PROJECT ===================== -->
+        <section id="project" class="section">
+            <div class="container">
+                <h2 class="section-title">Project</h2>
+
+                <div class="project-grid">
+
+                    <!-- PROJECT 1 -->
+                    <article class="project-card">
+                        <div class="project-thumb pattern-a">
+                            <span class="thumb-label">Koleksi Motif Kain</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>RŌSHI STUDIO: Koleksi Motif Busana Muslimah</h3>
+                            <p>
+                                Rangkaian motif kain untuk busana muslimah modern yang terinspirasi dari
+                                keindahan bentuk sederhana. Setiap motif dirancang dengan perpaduan warna
+                                lembut dan detail rapi agar nyaman dipakai dan tetap elegan.
+                            </p>
+                            <p class="project-meta">Tools: Adobe Illustrator, CorelDRAW</p>
+                            <a href="https://LINK-PROJECT-1" target="_blank" rel="noopener" class="project-link">Lihat project</a>
+                        </div>
+                    </article>
+
+                    <!-- PROJECT 2 -->
+                    <article class="project-card">
+                        <div class="project-thumb pattern-b">
+                            <span class="thumb-label">Seamless Pattern</span>
+                        </div>
+                        <div class="project-body">
+                            <h3>Seamless Pattern Digital</h3>
+                            <p>
+                                Kumpulan pola berulang yang bisa dipakai untuk kain, kemasan produk, dan
+                                branding. Polanya dibuat agar sambungan antarmotif tidak terlihat dan tetap
+                                rapi saat diperbesar.
+                            </p>
+                            <p class="project-meta">Tools: Adobe Illustrator, Procreate</p>
+                            <a href="https://LINK-PROJECT-2" target="_blank" rel="noopener" class="project-link">Lihat project</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ===================== KONTAK ===================== -->
+        <section id="kontak" class="section section-alt">
+            <div class="container">
+                <h2 class="section-title">Kontak</h2>
+
+                <div class="contact-wrap">
+                    <form id="formKontak" novalidate>
+                        <div class="form-group">
+                            <label for="nama">Nama</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda">
+                            <small class="error-msg" id="errNama"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="contoh@email.com">
+                            <small class="error-msg" id="errEmail"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pesan">Pesan</label>
+                            <textarea id="pesan" name="pesan" rows="5" placeholder="Tulis pesan atau permintaan desain Anda"></textarea>
+                            <small class="error-msg" id="errPesan"></small>
+                        </div>
+
+                        <button type="submit" class="btn" id="btnKirim">Kirim</button>
+                    </form>
+
+                    <!-- Pesan berhasil -->
+                    <div id="successMsg" class="success-msg" role="status" hidden></div>
+
+                    <!-- Data form ditampilkan di bawah form setelah dikirim -->
+                    <div id="hasilForm" class="hasil-form" hidden>
+                        <h3>Data yang Anda Kirim</h3>
+                        <table class="hasil-table">
+                            <tbody>
+                                <tr><th>Nama</th><td id="outNama"></td></tr>
+                                <tr><th>Email</th><td id="outEmail"></td></tr>
+                                <tr><th>Pesan</th><td id="outPesan"></td></tr>
+                                <tr><th>Waktu</th><td id="outWaktu"></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2026 Nama Lengkap Anda &ndash; RŌSHI STUDIO, Where Fabric Meets Art.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,484 @@
+/* ===================== VARIABEL & RESET ===================== */
+:root {
+    --ink: #2a1d38;
+    --ink-soft: #5d4f6b;
+    --rose: #b0446a;
+    --rose-dark: #8c3354;
+    --bg: #f8f5fa;
+    --bg-alt: #efe8f3;
+    --white: #ffffff;
+    --line: #d9cde2;
+    --error: #c0392b;
+    --ok: #1f7a55;
+    --radius: 10px;
+    --font-body: "Poppins", "Segoe UI", Roboto, Arial, sans-serif;
+    --font-head: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 70px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background-color: var(--bg);
+    line-height: 1.75;
+}
+
+img { max-width: 100%; display: block; }
+ul { list-style: none; }
+a { color: inherit; text-decoration: none; }
+
+h1, h2, h3 {
+    font-family: var(--font-head);
+    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===================== NAVBAR ===================== */
+#header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--ink);
+    border-bottom: 3px solid var(--rose);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 14px 20px;
+}
+
+.logo {
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 6px;
+}
+
+.nav-link {
+    display: block;
+    padding: 8px 16px;
+    color: #dccfe6;
+    font-weight: 500;
+    font-size: 0.92rem;
+    border-radius: 6px;
+    transition: background-color 0.25s, color 0.25s;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--rose);
+    color: var(--white);
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 8px;
+    background: none;
+    border: 1px solid #5d4f6b;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 22px;
+    height: 2px;
+    background-color: var(--white);
+}
+
+/* ===================== SECTION ===================== */
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    background-color: var(--bg-alt);
+}
+
+.section-title {
+    display: inline-block;
+    margin-bottom: 28px;
+    padding-bottom: 8px;
+    font-size: 2.3rem;
+    border-bottom: 3px solid var(--rose);
+}
+
+.sub-title {
+    margin: 36px 0 14px;
+    font-size: 1.6rem;
+}
+
+/* ===================== HOME ===================== */
+.hero {
+    padding: 90px 0;
+    background-color: var(--white);
+    /* motif titik halus sebagai latar */
+    background-image: radial-gradient(circle, rgba(176, 68, 106, 0.12) 2px, transparent 3px);
+    background-size: 28px 28px;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-text { flex: 1; }
+
+.hero-greeting {
+    color: var(--rose-dark);
+    font-weight: 500;
+}
+
+.hero-text h1 {
+    margin: 6px 0 20px;
+    font-size: 3.4rem;
+}
+
+.biodata {
+    margin-bottom: 28px;
+}
+
+.biodata li {
+    display: flex;
+    gap: 6px;
+    max-width: 380px;
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--line);
+}
+
+.biodata strong {
+    min-width: 120px;
+}
+
+.hero-photo img {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid var(--rose);
+    padding: 6px;
+    background-color: var(--white);
+}
+
+/* ===================== TOMBOL ===================== */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--rose);
+    color: var(--white);
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 2px solid var(--rose);
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.25s, transform 0.2s;
+}
+
+.btn:hover {
+    background-color: var(--rose-dark);
+    border-color: var(--rose-dark);
+    transform: translateY(-2px);
+}
+
+/* ===================== TENTANG ===================== */
+.about-text {
+    max-width: 75ch;
+    color: var(--ink-soft);
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--white);
+}
+
+th, td {
+    padding: 12px 16px;
+    text-align: left;
+    border: 1px solid var(--line);
+}
+
+thead th {
+    background-color: var(--ink);
+    color: var(--white);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--bg);
+}
+
+/* ===================== SKILL ===================== */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex: 1 1 280px;
+    padding: 14px 20px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-left: 5px solid var(--rose);
+    border-radius: var(--radius);
+    font-weight: 500;
+}
+
+.skill-percent {
+    color: var(--rose-dark);
+    font-weight: 600;
+}
+
+/* ===================== PROJECT ===================== */
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+.project-card {
+    flex: 1 1 300px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow 0.25s, transform 0.25s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(42, 29, 56, 0.14);
+}
+
+/* Gambar project: motif kain dibuat dengan CSS */
+.project-thumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+}
+
+.pattern-a {
+    background-color: var(--rose);
+    background-image:
+        radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.5) 0 9px, transparent 10px),
+        radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.5) 0 9px, transparent 10px),
+        radial-gradient(circle at 75% 25%, rgba(255, 255, 255, 0.22) 0 5px, transparent 6px),
+        radial-gradient(circle at 25% 75%, rgba(255, 255, 255, 0.22) 0 5px, transparent 6px);
+    background-size: 56px 56px;
+}
+
+.pattern-b {
+    background-color: var(--ink);
+    background-image:
+        linear-gradient(45deg, rgba(255, 255, 255, 0.14) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.14) 75%),
+        linear-gradient(45deg, rgba(255, 255, 255, 0.14) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.14) 75%);
+    background-size: 44px 44px;
+    background-position: 0 0, 22px 22px;
+}
+
+.thumb-label {
+    padding: 6px 18px;
+    background-color: rgba(42, 29, 56, 0.88);
+    color: var(--white);
+    font-family: var(--font-head);
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-radius: 6px;
+}
+
+.project-body {
+    padding: 20px;
+}
+
+.project-body h3 {
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+.project-body p {
+    margin-bottom: 10px;
+    color: var(--ink-soft);
+}
+
+.project-meta {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--rose-dark) !important;
+}
+
+.project-link {
+    display: inline-block;
+    color: var(--rose-dark);
+    font-weight: 600;
+    border-bottom: 2px solid var(--rose);
+}
+
+.project-link:hover {
+    color: var(--ink);
+}
+
+/* ===================== KONTAK / FORM ===================== */
+.contact-wrap {
+    max-width: 640px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 12px 14px;
+    font-family: inherit;
+    font-size: 1rem;
+    color: var(--ink);
+    background-color: var(--white);
+    border: 2px solid var(--line);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--rose);
+}
+
+.form-group.invalid input,
+.form-group.invalid textarea {
+    border-color: var(--error);
+}
+
+.error-msg {
+    min-height: 1.2em;
+    margin-top: 4px;
+    color: var(--error);
+    font-weight: 500;
+}
+
+.success-msg {
+    margin-top: 22px;
+    padding: 14px 18px;
+    background-color: #e0f3ea;
+    color: var(--ok);
+    font-weight: 600;
+    border: 1px solid var(--ok);
+    border-left: 6px solid var(--ok);
+    border-radius: var(--radius);
+}
+
+.hasil-form {
+    margin-top: 22px;
+    padding: 20px;
+    background-color: var(--white);
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+}
+
+.hasil-form h3 {
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+}
+
+.hasil-table th {
+    width: 110px;
+    background-color: var(--bg-alt);
+}
+
+.hasil-table td {
+    word-break: break-word;
+    white-space: pre-line;
+}
+
+[hidden] { display: none !important; }
+
+/* ===================== FOOTER ===================== */
+.footer {
+    padding: 24px 20px;
+    text-align: center;
+    background-color: var(--ink);
+    color: #c6b8d3;
+    font-size: 0.9rem;
+}
+
+/* ===================== RESPONSIVE (TABLET & MOBILE) ===================== */
+@media (max-width: 768px) {
+    .menu-toggle { display: flex; }
+
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        padding: 10px 20px 16px;
+        background-color: var(--ink);
+        border-bottom: 3px solid var(--rose);
+    }
+
+    .nav-menu.open { display: flex; }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    .biodata li {
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .hero-text h1 { font-size: 2.5rem; }
+    .hero-photo img { width: 210px; height: 210px; }
+
+    .section { padding: 56px 0; }
+    .section-title { font-size: 1.9rem; }
+}
